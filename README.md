@@ -100,10 +100,16 @@ This project uses [CMake] and [Hunter] package manager.
    cmake ..
    ```
 
-   Note: In Windows, it is possible to have issues with VS 2017 compilers, in that case, use VS 2017 installer to get VS 2015 compilers and use:
+   On Windows with Visual Studio 2017 and CUDA 9.2 installed:
 
    ```sh
-   cmake .. -G "Visual Studio 15 2017 Win64" -Tv140,host=x64
+   cmake .. -G "Visual Studio 15 2017 Win64"
+   ```
+
+   With CUDA 9.1 you will need the VS2015 SDK installed and called like this:
+
+   ```sh
+   cmake .. -G "Visual Studio 15 2017 Win64" -T v140
    ```
 
 4. Build the project using [CMake Build Tool Mode]. This is a portable variant
