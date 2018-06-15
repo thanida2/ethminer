@@ -8,7 +8,7 @@
 
 **Ethminer** is an Ethash GPU mining worker: with ethminer you can mine every coin which relies on an Ethash Proof of Work thus including Ethereum, Ethereum Classic, Metaverse, Musicoin, Ellaism, Pirl, Expanse and others. This is the actively maintained version of ethminer. It originates from [cpp-ethereum] project (where GPU mining has been discontinued) and builds on the improvements made in [Genoil's fork]. See [FAQ](#faq) for more details.
 
-### Features
+## Features
 
 - OpenCL mining
 - Nvidia CUDA mining
@@ -59,7 +59,7 @@ For a full list of available command, please run:
 ethminer --help
 ```
 
-### Examples connecting some pools
+### Examples connecting to pools
 
 Check our [samples](POOL_EXAMPLES_ETH.md) to see how to connect to different pools.
 
@@ -81,33 +81,32 @@ To download the .exe on a build under 'JOB NAME' select 'Configuration: Release'
 
 This project uses [CMake] and [Hunter] package manager.
 
-1. Make sure git submodules are up to date
+1. Make sure git submodules are up to date:
 
    ```sh
    git submodule update --init --recursive
    ```
 
-2. Create a build directory.
+2. Create a build directory:
 
    ```sh
    mkdir build; cd build
    ```
 
-3. Configure the project with CMake. Check out additional
+3. Configure the project with CMake. Check out the additional
    [configuration options](#cmake-configuration-options).
 
    ```sh
    cmake ..
    ```
 
-   Note: In Windows, it is possible to have issues with VS 2017 compilers, in that case, use VS 2017 installer to get VS 2015 compilers and use:
+   Note: On Windows, it's possible to have issues with VS 2017 default compilers; in that case, use the VS 2017 installer to get the VS 2015 compilers and use:
 
    ```sh
-   cmake .. -G "Visual Studio 15 2017 Win64" -Tv140,host=x64
+   cmake .. -G "Visual Studio 15 2017 Win64" -T v140
    ```
 
-4. Build the project using [CMake Build Tool Mode]. This is a portable variant
-   of `make`.
+4. Build the project using [CMake Build Tool Mode]. This is a portable variant of `make`.
 
    ```sh
    cmake --build .
@@ -128,7 +127,7 @@ This project uses [CMake] and [Hunter] package manager.
 #### OpenCL support on Linux
 
 If you're planning to use [OpenCL on Linux](https://github.com/ruslo/hunter/wiki/pkg.opencl#pitfalls)
-you have to install OpenGL libraries. E.g. on Ubuntu run:
+you have to install the OpenGL libraries. E.g. on Ubuntu run:
 
 ```sh
 sudo apt-get install mesa-common-dev
@@ -138,7 +137,7 @@ sudo apt-get install mesa-common-dev
 
 If you want to install dependencies yourself or use system package manager
 you can disable Hunter by adding
-[-DHUNTER_ENABLED=OFF](https://docs.hunter.sh/en/latest/reference/user-variables.html#hunter-enabled)
+[`-DHUNTER_ENABLED=OFF`](https://docs.hunter.sh/en/latest/reference/user-variables.html#hunter-enabled)
 to configuration options.
 
 ### CMake configuration options
@@ -219,8 +218,8 @@ Licensed under the [GNU General Public License, Version 3](LICENSE).
    There is an environment var `CUDA_DEVICE_ORDER` which tells the Nvidia CUDA driver how to enumerates the graphic cards.
    Following values are valid:
 
-   * FASTEST_FIRST (Default) - causes CUDA to guess which device is fastest using a simple heuristic.
-   * PCI_BUS_ID - orders devices by PCI bus ID in ascending order.
+   * `FASTEST_FIRST` (Default) - causes CUDA to guess which device is fastest using a simple heuristic.
+   * `PCI_BUS_ID` - orders devices by PCI bus ID in ascending order.
 
    To prevent some unwanted changes in the order of your CUDA devices you **might set the environment to `PCI_BUS_ID`**.
    This can be done:
