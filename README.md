@@ -28,7 +28,7 @@
   - [Continuous Integration and development builds](#continuous-integration-and-development-builds)
   - [Building from source](#building-from-source)
   - [CMake configuration options](#cmake-configuration-options)
-- [Maintainer](#maintainer)
+- [Maintainers & Authors](#maintainers--authors)
 - [Contribute](#contribute)
 - [F.A.Q.](#faq)
 
@@ -155,11 +155,19 @@ cmake .. -DETHASHCUDA=ON -DETHASHCL=OFF
 - `-DETHDBUS=ON` - enable D-Bus support, `OFF` by default.
 
 
-## Maintainer
+## Maintainers & Authors
 
 [![Gitter](https://img.shields.io/gitter/room/ethereum-mining/ethminer.svg)][Gitter]
 
-- Paweł Bylica [@chfast](https://github.com/chfast)
+[Contributors statistics since 2015-08-20](https://github.com/ethereum-mining/ethminer/graphs/contributors?from=2015-08-20).
+
+| Name | Contact |     |
+| ---- | ------- | --- |
+| Andrea Lanfranchi | [@AndreaLanfranchi](https://github.com/AndreaLanfranchi) |  |
+| Genoil            | [@Genoil](https://github.com/Genoil)                     |  |
+| Jean Cyr     | [@jean-m-cyr](https://github.com/jean-m-cyr) |  |
+| Paweł Bylica | [@chfast](https://github.com/chfast)         | ETH: 0x8FB24C5b5a75887b429d886DBb57fd053D4CF3a2 |
+| XhmikosR     | [@XhmikosR](https://github.com/XhmikosR)     |  |
 
 
 ## Contribute
